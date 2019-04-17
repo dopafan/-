@@ -1,0 +1,2001 @@
+TrayTip ,视听说辅助工具,使用方法：`n按下F1可查看帮助, 30, 1
+stsky_class=Form2 ahk_class ThunderRT6FormDC ;视听说口语部分窗口Class
+stsky_ctrlclassnn=ThunderRT6UserControlDC7 ;视听说口语第二部分控制ClassNN
+;使用帮助
+ToolTip,
+(
+
+
+为众人抱薪者，不可使其冻毙于山林
+
+
+※特别提示（必看）:
+绝对不教怎么用！自己研究，用不了就算了，别来问我。
+除非有答案问题可以反馈，其他的一切软件问题不要来吵我
+软件使用帮助已经写了很清楚了
+本软件只能做
+Basic listening 
+Listening in的Task 1  Task 2  Task 3
+Let's talk的Task 1
+Further listening and speaking的Task 1  Task 2  Task 3 Viewing & speaking Task 1
+Unit test
+其他均不能做，如果做以上题目软件报错，说明答案错了，请及时向我反馈
+软件报错后需要重启软件
+经过测试，软件暂时只能在360极速浏览器兼容模式下和Chrome中使用，所以软件附带安装包，其他环境自行考虑
+第4册的一单元的Listening in的  Task 2 不可用，会退出，原因不明
+※功能
+全部文件解压登录新视野然后按F7喝口水就结束了
+=====主功能=====
+F7 自动填写!
+==============
+F9 窗口置顶，第一次按下会把鼠标所在位置下窗口置顶，第二次按下取消置顶
+F12 暂停一切操作
+Esc 退出帮助
+                                       ——匿名
+此工具不会更新了，因为不需要更新了，希望你们使用愉快
+                                       2019.04.05
+更新了答案库，答案和软件必须在同一个文件夹中，建议都放在桌面
+                                       ——匿名 2019.04.06
+更新了url，此版本只针对大二下学期的
+                                       ——匿名 2019.04.06
+本软件一共8次更新，4次重构，感谢有你们
+),300,250
+KeyWait,Esc,D
+ToolTip
+Return
+
+F7::
+FileRead, 1Var, url.txt
+StringSplit,1array,1Var,`r`n
+xz:=0
+while(xz<1array0)
+{
+xz++
+xy:=1array%xz%
+zhe(xy)
+}
+
+zhe(domain)
+{
+StringSplit,urlarray,domain,=
+StringSplit,danyuanary,urlarray2
+zzz:=1
+test:=1
+while (test<50){
+zzzz:=danyuanary%zzz%
+if zzzz is number
+{
+dan1yuan:=zzzz
+}
+zzz:=zzz+1
+if (zzzz!=&)
+{
+dan1yuan:=0
+}
+test++
+}
+StringSplit,danyuanary,urlarray3
+zzz:=1
+test:=1
+while (test<50){
+zzzz:=danyuanary%zzz%
+if zzzz is number
+{
+dan2yuan:=zzzz
+}
+zzz++
+test++
+}
+StringSplit,danyuanary,urlarray4
+zzz:=1
+test:=1
+while (test<50){
+zzzz:=danyuanary%zzz%
+if zzzz is number
+{
+dan3yuan:=zzzz
+}
+zzz++
+test++
+}
+;url分析,需要复制网页
+FileRead, daanVar, daan.txt
+StringSplit,daandanyuanarray,daanVar,$
+;读文件,用$分割
+if (dan1yuan==1)
+{
+StringSplit,zzzary,daandanyuanarray1,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+} 
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+} 
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==2)
+{
+StringSplit,zzzary,daandanyuanarray2,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==3)
+{
+StringSplit,zzzary,daandanyuanarray3,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==4)
+{
+StringSplit,zzzary,daandanyuanarray4,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==5)
+{
+StringSplit,zzzary,daandanyuanarray5,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==6)
+{
+StringSplit,zzzary,daandanyuanarray6,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==7)
+{
+StringSplit,zzzary,daandanyuanarray7,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==8)
+{
+StringSplit,zzzary,daandanyuanarray8,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==9)
+{
+StringSplit,zzzary,daandanyuanarray9,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+if (dan1yuan==0)
+{
+StringSplit,zzzary,daandanyuanarray10,`r
+if(dan2yuan==2)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary1,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary2,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary3,domain,N)
+}
+if(dan2yuan==3)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary4,domain,N)
+}
+if(dan2yuan==5)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary5,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==1)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary6,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==2)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary7,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==3)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary8,domain,N)
+}
+if(dan2yuan==6)and(dan3yuan==4)
+{
+StringSplit,panduanarray,domain,j
+StringSplit,pan1duanarray,panduanarray2
+StringReplace,pan1duanarray3,pan1duanarray3,b,0,UseErrorLevel
+StringReplace,pan1duanarray3,pan1duanarray3,t,1,UseErrorLevel
+if(pan1duanarray3==0) {
+N:=2
+}
+else if(pan1duanarray3==1) {
+N:=4
+}
+else{
+N:=1
+}
+mainn(zzzary9,domain,N)
+}
+if(dan2yuan==7)and(dan3yuan==1)
+{
+mainn(zzzary10,domain,3)
+}
+}
+}
+
+mainn(canststc1,canststc2,F)
+{
+if (F==1)
+{
+ststc1:=canststc1
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r,,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_Tab%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,A,0,UseErrorLevel
+StringReplace,ststc1,ststc1,B,1,UseErrorLevel
+StringReplace,ststc1,ststc1,C,2,UseErrorLevel
+StringReplace,ststc1,ststc1,D,3,UseErrorLevel
+StringReplace,ststc1,ststc1,T,0,UseErrorLevel
+StringReplace,ststc1,ststc1,F,1,UseErrorLevel
+StringReplace,ststc1,ststc1,￥,$,UseErrorLevel
+StringSplit,Array,ststc1
+sum:=0
+pwb := ComObjCreate("InternetExplorer.Application")
+pwb.Visible := 1
+domain:=canststc2
+pwb.Navigate(domain)
+while pwb.ReadyState <> 4
+{}
+while(sum<Array0)
+{
+b:=sum+1
+um:=Array%b%
+stst2c:="Item_@"
+stst1c=!
+StringReplace,stst1c,stst1c,!,%um%,UseErrorLevel
+StringReplace,stst2c,stst2c,@,%sum%,UseErrorLevel
+pwb.document.getElementsByName(stst2c)[stst1c].checked:=1
+StringReplace,stst2c,stst2c,%sum%,@,UseErrorLevel
+StringReplace,stst1c,stst1c,%um%,!,UseErrorLevel
+sum++
+}
+pwb.document.getElementsByClassName("btn01 ct")[0].click()
+sleep,1000
+pwb.document.getElementsByClassName("btn01 left")[0].click()
+}
+;单选题
+if (F==2)
+{
+ststc3:="Item_0_!"
+ststc2=@
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,`n,,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%,%A_Tab%,UseErrorLevel
+geshu:=ErrorLevel+1
+Loop
+{
+    StringReplace,canststc1,canststc1,`r`n,%A_SPACE%,UseErrorLevel
+    if ErrorLevel = 0  ; 不需要再进行替换.
+        break
+}
+StringReplace,ststc,canststc1,@,%A_SPACE%,UseErrorLevel
+StringSplit,Array,ststc,%A_Tab%
+sum:=0
+pwb := ComObjCreate("InternetExplorer.Application")
+pwb.Visible := 1
+domain:=canststc2
+pwb.Navigate(domain)
+while pwb.ReadyState <> 4
+{}
+while (sum<geshu){
+StringReplace,ststc3,ststc3,!,%sum%,UseErrorLevel
+b:=sum+1
+um:=Array%b%
+StringReplace,ststc2,ststc2,@,%um%,UseErrorLevel
+pwb.document.getElementsByName(ststc3)[0].value:=ststc2
+StringReplace,ststc3,ststc3,0,@
+StringReplace,ststc3,ststc3,%sum%,!,UseErrorLevel
+StringReplace,ststc3,ststc3,@,0,UseErrorLevel
+StringReplace,ststc2,ststc2,%um%,@,UseErrorLevel
+sum++
+}
+pwb.document.getElementsByClassName("btn01 ct")[0].click()
+sleep,1000
+pwb.document.getElementsByClassName("btn01 left")[0].click()
+}
+;填空题
+if (F==4)
+{
+ststc3:="Item_!"
+ststc2=@
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,canststc1,canststc1,`n,,UseErrorLevel
+StringReplace,canststc1,canststc1,%A_SPACE%,%A_Tab%,UseErrorLevel
+geshu:=ErrorLevel+1
+Loop
+{
+    StringReplace,canststc1,canststc1,`r`n,%A_SPACE%,UseErrorLevel
+    if ErrorLevel = 0  ; 不需要再进行替换.
+        break
+}
+StringReplace,ststc,canststc1,@,%A_SPACE%,UseErrorLevel
+StringSplit,Array,ststc,%A_Tab%
+sum:=0
+pwb := ComObjCreate("InternetExplorer.Application")
+pwb.Visible := 1
+domain:=canststc2
+pwb.Navigate(domain)
+while pwb.ReadyState <> 4
+{}
+while (sum<geshu){
+StringReplace,ststc3,ststc3,!,%sum%,UseErrorLevel
+b:=sum+1
+um:=Array%b%
+StringReplace,ststc2,ststc2,@,%um%,UseErrorLevel
+pwb.document.getElementsByName(ststc3)[0].value:=ststc2
+StringReplace,ststc3,ststc3,%sum%,!,UseErrorLevel
+StringReplace,ststc2,ststc2,%um%,@,UseErrorLevel
+sum++
+}
+pwb.document.getElementsByClassName("btn01 ct")[0].click()
+sleep,1000
+pwb.document.getElementsByClassName("btn01 left")[0].click()
+}
+;文本题
+if (F==3)
+{
+StringSplit,daanary,canststc1,#
+ststc3:="Item-2-1-!"
+ststc2=@
+pwb := ComObjCreate("InternetExplorer.Application")
+pwb.Visible := 1
+domain:=canststc2
+pwb.Navigate(domain)
+while pwb.ReadyState <> 4
+{}
+StringReplace,daanary2,daanary2,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,daanary2,daanary2,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,daanary2,daanary2,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,daanary2,daanary2,`n,,UseErrorLevel
+StringReplace,daanary2,daanary2,%A_SPACE%,%A_Tab%,UseErrorLevel
+geshu:=ErrorLevel+1
+Loop
+{
+    StringReplace,daanary2,daanary2,`r`n,%A_SPACE%,UseErrorLevel
+    if ErrorLevel = 0  ; 不需要再进行替换.
+        break
+}
+StringReplace,ststc,daanary2,@,%A_SPACE%,UseErrorLevel
+StringSplit,Array,ststc,%A_Tab%
+sum:=0
+while (sum<geshu){
+StringReplace,ststc3,ststc3,!,%sum%,UseErrorLevel
+b:=sum+1
+um:=Array%b%
+StringReplace,ststc2,ststc2,@,%um%,UseErrorLevel
+pwb.document.getElementsByName(ststc3)[0].value:=ststc2
+StringReplace,ststc3,ststc3,2,@
+StringReplace,ststc3,ststc3,1,#
+StringReplace,ststc3,ststc3,%sum%,!,UseErrorLevel
+StringReplace,ststc3,ststc3,@,2,UseErrorLevel
+StringReplace,ststc3,ststc3,#,1,UseErrorLevel
+StringReplace,ststc2,ststc2,%um%,@,UseErrorLevel
+sum++
+}
+ststc1:=daanary1
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r,,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_Tab%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,A,0,UseErrorLevel
+StringReplace,ststc1,ststc1,B,1,UseErrorLevel
+StringReplace,ststc1,ststc1,C,2,UseErrorLevel
+StringReplace,ststc1,ststc1,D,3,UseErrorLevel
+StringReplace,ststc1,ststc1,T,0,UseErrorLevel
+StringReplace,ststc1,ststc1,F,1,UseErrorLevel
+StringSplit,Array,ststc1
+sum:=0
+while(sum<Array0)
+{
+b:=sum+1
+um:=Array%b%
+stst2c:="Item-1-@"
+stst1c=!
+StringReplace,stst1c,stst1c,!,%um%,UseErrorLevel
+StringReplace,stst2c,stst2c,@,%sum%,UseErrorLevel
+pwb.document.getElementsByName(stst2c)[stst1c].checked:=1
+StringReplace,stst2c,stst2c,1,#
+StringReplace,stst2c,stst2c,%sum%,@,UseErrorLevel
+StringReplace,stst2c,stst2c,#,1
+StringReplace,stst1c,stst1c,%um%,!,UseErrorLevel
+sum++
+}
+ststc1:=daanary3
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r,,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_Tab%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,A,0,UseErrorLevel
+StringReplace,ststc1,ststc1,B,1,UseErrorLevel
+StringReplace,ststc1,ststc1,C,2,UseErrorLevel
+StringReplace,ststc1,ststc1,D,3,UseErrorLevel
+StringReplace,ststc1,ststc1,T,0,UseErrorLevel
+StringReplace,ststc1,ststc1,F,1,UseErrorLevel
+StringSplit,Array,ststc1
+sum:=0
+while(sum<Array0)
+{
+b:=sum+1
+um:=Array%b%
+stst2c:="Item-3-@"
+stst1c=!
+StringReplace,stst1c,stst1c,!,%um%,UseErrorLevel
+StringReplace,stst2c,stst2c,@,%sum%,UseErrorLevel
+pwb.document.getElementsByName(stst2c)[stst1c].checked:=1
+StringReplace,stst2c,stst2c,3,#
+StringReplace,stst2c,stst2c,%sum%,@,UseErrorLevel
+StringReplace,stst2c,stst2c,#,3
+StringReplace,stst1c,stst1c,%um%,!,UseErrorLevel
+sum++
+}
+ststc1:=daanary4
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%%A_Space%,%A_Space%,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_SPACE%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r,,UseErrorLevel
+StringReplace,ststc1,ststc1,%A_Tab%,,UseErrorLevel
+StringReplace,ststc1,ststc1,`r`n,,UseErrorLevel
+StringReplace,ststc1,ststc1,A,0,UseErrorLevel
+StringReplace,ststc1,ststc1,B,1,UseErrorLevel
+StringReplace,ststc1,ststc1,C,2,UseErrorLevel
+StringReplace,ststc1,ststc1,D,3,UseErrorLevel
+StringReplace,ststc1,ststc1,T,0,UseErrorLevel
+StringReplace,ststc1,ststc1,F,1,UseErrorLevel
+StringSplit,Array,ststc1
+sum:=0
+while(sum<Array0)
+{
+b:=sum+1
+um:=Array%b%
+stst2c:="Item-4-@"
+stst1c=!
+StringReplace,stst1c,stst1c,!,%um%,UseErrorLevel
+StringReplace,stst2c,stst2c,@,%sum%,UseErrorLevel
+pwb.document.getElementsByName(stst2c)[stst1c].checked:=1
+StringReplace,stst2c,stst2c,4,#
+StringReplace,stst2c,stst2c,%sum%,@,UseErrorLevel
+StringReplace,stst2c,stst2c,#,4
+StringReplace,stst1c,stst1c,%um%,!,UseErrorLevel
+sum++
+}
+pwb.document.getElementsByClassName("btn01 ct")[0].click()
+sleep,200
+pwb.document.getElementsByClassName("btn01 left")[0].click()
+}
+}
+return
+
+
+;置顶
+F9::
+MouseGetPos , , , zdwid ,  ; 得到鼠标所在位置窗口的id及控件名称
+WinSet, AlwaysOnTop, toggle,ahk_id %zdwid%
+WinGet,zd_pd, ExStyle,ahk_id %zdwid%
+if (zd_pd & 0x8)  ; 0x8 为 WS_EX_TOPMOST
+   ToolTip,窗口已置顶
+Else
+   ToolTip,窗口已取消置顶
+sleep,3000
+ToolTip
+return
+F12::pause
